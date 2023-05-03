@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CSS Grid - line-based placement starting point</title>
+    <style>
+      body {
+        background-color: lightgrey;
+        width: 90%;
+        max-width: 900px;
+        margin: 2em auto;
+        font: 1.0em/1.2 Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 20px;
+      }
+
+      header,
+      footer {
+        border-radius: 5px;
+        padding: 10px;
+        background-color: rgb(207, 232, 220);
+        border: 2px solid black;
+        font-size: large;
+      }
+
+      aside {
+        border-right: 1px solid #999;
+      }
+
+      .container{
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "sidebar content"
+          "footer footer";
+        grid-template-columns: 1fr 3fr;
+        gap: 20px;
+      }
+
+      header{
+        grid-area: header;
+      }
+
+      article{
+        grid-area: content;
+      }
+
+      aside{
+        grid-area: sidebar;
+      }
+
+      footer{
+        grid-area: footer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>This Is My Lovely Blog</header>
+      <article>
+        <h1>My Article</h1>
+        
+        <p>
+          Keymer Cuesta is my name. I am twenty three years old and was sadly born in the United States. My family was born and raised in the Dominican Republic which makes that my ethnicity and Spanish is my first language due to these circumstances. I am what one would call an extrovert with some tendencies of being an introvert. I am very independent and don't like being confined to many rules, I am an artist in that sense.
+        </p>
+
+        <p>
+          I study at SUNY Purchase College. I'm getting a bachelors in fine arts for acting and I'm in my senior year. I would love to get on some tv series and films. Although I will forever love theater because it has been my foundation and most of my training. I would also like to go back to school for theater education in order to teach acting. It is, I believe, one of my biggest dreams. One fun fact about me is that I love cooking and am quite good at it although I don't look it.
+        </p>
+      </article>
+      <aside>
+        <h2>Other Things</h2>
+          <ul>
+            <li>I'm a trained prep chef</li>
+            <li>I love to stay active and busy</li>
+            <li>I used to play rugby</li>
+            <li>I love to play videgames</li>
+        </ul>
+  
+        <img src="img1.jpg" alt="" width="200" height="250"/>
+      </aside>
+      <footer>Contact Me @mysite.com</footer>
+    </div>
+  </body>
+</html>
